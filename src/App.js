@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Mycomponent from './components/Mycomponent/Mycomponent.js';
+import Title from './components/Title/Title.js';
+import { useState } from 'react';
 
 function App() {
+
+  const [myStyle] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Just a test</h1>
+      <Mycomponent />
+
+      <h1 className={myStyle ? "style1" : "style2"} >Outra coisa</h1>
+
+      <Title />
+
     </div>
   );
 }
